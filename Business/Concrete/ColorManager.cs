@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Business.Concrete
 {
-    public class ColorManager : ICarColorService
+    public class ColorManager : IColorService
     {
         IColorDal _colorDal;
 

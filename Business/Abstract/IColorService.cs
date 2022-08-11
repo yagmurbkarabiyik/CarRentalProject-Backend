@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Business.Abstract
 {
-    public interface ICarColorService 
+    public interface IColorService 
     {
         IDataResult<List<Color>> GetAll();
         IDataResult<Color> GetById(int id);

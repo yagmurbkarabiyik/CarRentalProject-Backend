@@ -27,38 +27,38 @@ namespace Business.Concrete
             {
                 return new ErrorResult(Messages.ErrorMessage);
             }
-            return new SuccesResult(Messages.RentalAdded);
+            return new SuccessResult(Messages.RentalAdded);
         }
 
         public IResult Delete(Rental rental)
         {
             _rentalDal.Delete(rental);
-            return new SuccesResult(Messages.RentalDeleted);
+            return new SuccessResult(Messages.RentalDeleted);
         }
 
         public IDataResult<List<Rental>> GetAll()
         {
             var value = _rentalDal.GetAll();
-            return new SuccesDataResult<List<Rental>>(value, Messages.RentalGetAll);
+            return new SuccessDataResult<List<Rental>>(value, Messages.RentalGetAll);
         }
 
         public IDataResult<Rental> GetById(int id)
         {
             var value = _rentalDal.Get(p => p.RentalId == id);
-            return new SuccesDataResult<Rental>(value, Messages.RentalGetById);
+            return new SuccessDataResult<Rental>(value, Messages.RentalGetById);
         }
 
         public IDataResult<List<RentalDetailDto>> GetRentalDetails()
         {
             var value = _rentalDal.GetRentalDetail();
-            return new SuccesDataResult<List<RentalDetailDto>>(value, Messages.RentalDetailDto);
+            return new SuccessDataResult<List<RentalDetailDto>>(value, Messages.RentalDetailDto);
 
         }
 
         public IResult Update(Rental rental)
         {
             _rentalDal.Update(rental);
-            return new SuccesResult(Messages.RentalUpdated);
+            return new SuccessResult(Messages.RentalUpdated);
         }
     }
 }

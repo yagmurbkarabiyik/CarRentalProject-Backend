@@ -54,6 +54,14 @@ namespace Business.Constants
         public static string RentalGetById = "Kiralık Araç ID Bilgisine Göre Listelendi!";
         public static string RentalDetailDto = "Kiralık Araç Detayları Listelendi!";
 
+        public static string ImageAdded = "Fotoğraf Eklendi!";
+        public static string ImageDeleted = "Fotoğraf Silindi!";
+        public static string ImageUpdated = "Fotoğraf Güncellendi!";
+        public static string ImageGetAll = "Fotoğraflar Listelendi!";
+        public static string ImageNotFound = "Fotoğraf Bulunamadı!";
+        public static string ImageError = "Fotoğraf Eklenemedi!";
+        public static string ImageGetById = "Fotoğraf ID Bilgisine Göre Getirildi!";
+
 
         public static string MaintenanceTime = "Sistem Bakımda!";
         public static string ErrorMessage = "Hata!";

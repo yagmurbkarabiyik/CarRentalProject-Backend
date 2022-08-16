@@ -23,31 +23,31 @@ namespace Business.Concrete
         public IResult Add(User user)
         {
             _userDal.Add(user);
-            return new SuccesResult(Messages.UserAdded);
+            return new SuccessResult(Messages.UserAdded);
         }
 
         public IResult Delete(User user)
         {
             _userDal.Delete(user);
-            return new SuccesResult(Messages.UserDeleted);
+            return new SuccessResult(Messages.UserDeleted);
         }
 
         public IDataResult<List<User>> GetAll()
         {
             var value = _userDal.GetAll();
-            return new SuccesDataResult<List<User>>(value, Messages.UserGetAll);
+            return new SuccessDataResult<List<User>>(value, Messages.UserGetAll);
         }
 
         public IDataResult<User> GetById(int id)
         {
             var value = _userDal.Get(p => p.UserId == id);
-            return new SuccesDataResult<User>(value, Messages.UserGetById);
+            return new SuccessDataResult<User>(value, Messages.UserGetById);
         }
 
         public IResult Update(User user)
         {
             _userDal.Update(user);
-            return new SuccesResult(Messages.UserUpdated);
+            return new SuccessResult(Messages.UserUpdated);
         }
     }
 }

@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Core.Entities.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,6 +10,7 @@ namespace Business.Constants
 {
     public class Messages
     {
+        internal static readonly string UserAlreadyExists;
         public static string CarAdded = "Araba Eklendi!";
         public static string CarNameInvalid = "Araba Adı Geçersiz!";
         public static string CarListed = "Arabalar Listelendi!";
@@ -65,5 +68,13 @@ namespace Business.Constants
 
         public static string MaintenanceTime = "Sistem Bakımda!";
         public static string ErrorMessage = "Hata!";
+        public static string AuthorizationDenied = "Yetkiniz Yok!";
+        public static string UserRegistered = "Kayıt Başarılı!";
+        public static string UserNotFound = "Kullanıcı Bulunamadı!";
+        public static string SuccessfulLogin = "Giriş Başarılı!";
+        public static string PasswordError = "Hatalı Şifre!";
+        public static string AccessTokenCreated = "Access Token Created!";
+        public static string GetClaimMessage = "Claims Listed!";
+        public static string GetByMail = "Claims Listed with Mail!";
     }
 }

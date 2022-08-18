@@ -18,14 +18,14 @@ namespace DataAccess.Concrete.EntityFramework
             {
                 var result = from c in context.Customers
                              join u in context.Users
-                             on c.CustomerId equals u.UserId
+                             on c.CustomerId equals u.Id
                              select new CustomerDetailDto
                              {
                                  CustomerId = c.CustomerId,
                                  FirstName = u.FirstName,
                                  LastName = u.LastName,
                                  Email = u.Email,
-                                 Password = u.Password,
+                                 Password = u.PasswordHash,
                                  CompanyName = c.CompanyName
                              };
                 return result.ToList();

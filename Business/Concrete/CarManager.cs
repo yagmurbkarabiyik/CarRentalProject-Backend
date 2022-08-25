@@ -75,16 +75,23 @@ namespace Business.Concrete
             return new SuccessDataResult<List<CarDetailDto>>(value, Messages.CarDetail);
         }
 
-        public IDataResult<List<Car>> GetCarsByBrandId(int brandId)
+        public IDataResult<List<CarDetailDto>> GetCarDetailsById(int id)
         {
-            var value = _carDal.GetAll(p => p.BrandId == brandId);
-            return new SuccessDataResult<List<Car>>(value, Messages.CarByBrandId);
+            var value = _carDal.GetCarDetails(p => p.CarId == id);
+            return new SuccessDataResult<List<CarDetailDto>>(value);
+            
         }
 
-        public IDataResult<List<Car>> GetCarsByColorId(int colorId)
+        public IDataResult<List<CarDetailDto>> GetCarsByBrandId(int brandId)
         {
-            var value = _carDal.GetAll(p => p.ColorId == colorId);
-            return new SuccessDataResult<List<Car>>(value, Messages.CarByBrandId);       
+            var value = _carDal.GetCarDetails(p => p.BrandId == brandId);
+            return new SuccessDataResult<List<CarDetailDto>>(value, Messages.CarByBrandId);
+        }
+
+        public IDataResult<List<CarDetailDto>> GetCarsByColorId(int colorId)
+        {
+            var value = _carDal.GetCarDetails(p => p.ColorId == colorId);
+            return new SuccessDataResult<List<CarDetailDto>>(value, Messages.CarByBrandId);       
         }
 
         [ValidationAspect(typeof(CarValidator))]
